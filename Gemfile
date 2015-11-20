@@ -46,3 +46,10 @@ group :development do
 end
 
 gem 'bootstrap-sass', '~> 3.3.5'
+
+source 'https://rails-assets.org' do
+  gem 'rails-assets-jvectormap'
+  gem 'rails-assets-iCheck'
+  gem 'rails-assets-morrisjs'
+  gem 'rails-assets-select2'
+end

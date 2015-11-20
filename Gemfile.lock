@@ -1,5 +1,6 @@
 GEM
   remote: https://rubygems.org/
+  remote: https://rails-assets.org/
   specs:
     actionmailer (4.2.4)
       actionpack (= 4.2.4)
@@ -93,6 +94,17 @@ GEM
       bundler (>= 1.3.0, < 2.0)
       railties (= 4.2.4)
       sprockets-rails
+    rails-assets-iCheck (1.0.2)
+      rails-assets-jquery (>= 1.7)
+    rails-assets-jquery (2.1.4)
+    rails-assets-jvectormap (2.0.4)
+    rails-assets-mocha (1.17.1)
+    rails-assets-morrisjs (0.5.1)
+      rails-assets-jquery (>= 2.1.0)
+      rails-assets-mocha (~> 1.17.1)
+      rails-assets-raphael (>= 2.0)
+    rails-assets-raphael (2.1.4)
+    rails-assets-select2 (4.0.0)
     rails-deprecated_sanitizer (1.0.3)
       activesupport (>= 4.2.0.alpha)
     rails-dom-testing (1.0.7)
@@ -152,6 +164,10 @@ DEPENDENCIES
   jquery-rails
   pg
   rails (= 4.2.4)
+  rails-assets-iCheck!
+  rails-assets-jvectormap!
+  rails-assets-morrisjs!
+  rails-assets-select2!
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   spring
