@@ -3,6 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Font Awesome -->
@@ -39,7 +41,10 @@ desired effect
 -->
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
-  <!-- Left side column. contains the logo and sidebar -->
+
+  <%= render "admin/layouts/header" %>
+
+  <%= render "admin/layouts/sidebar" %>
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
@@ -62,6 +67,11 @@ desired effect
 
     </section><!-- /.content -->
   </div><!-- /.content-wrapper -->
+
+  <%= render "admin/layouts/footer" %>
+
+  <%= render "admin/layouts/control_sidebar" %>
+  
 </div><!-- ./wrapper -->
 
 <!-- Optionally, you can add Slimscroll and FastClick plugins.
