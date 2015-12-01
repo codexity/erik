@@ -1,0 +1,2 @@
+class MenuPage < Page
+end

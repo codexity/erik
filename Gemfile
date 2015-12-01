@@ -46,6 +46,9 @@ group :development do
 end
 
 gem 'bootstrap-sass', '~> 3.3.5'
+gem 'pry-rails'
+gem 'active_link_to'
+gem 'bootstrap-wysihtml5-rails'
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-jvectormap'

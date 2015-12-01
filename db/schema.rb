@@ -11,10 +11,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151119220425) do
+ActiveRecord::Schema.define(version: 20151130235804) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "contact_pages", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "custom_pages", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "gallery_pages", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "menu_pages", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "menus", force: :cascade do |t|
     t.string   "title"
@@ -27,8 +47,8 @@ ActiveRecord::Schema.define(version: 20151119220425) do
 
   create_table "pages", force: :cascade do |t|
     t.string   "title"
-    t.string   "type"
-    t.text     "context"
+    t.string   "page_type"
+    t.text     "content"
     t.json     "data"
     t.integer  "site_id"
     t.datetime "created_at", null: false

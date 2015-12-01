@@ -1,0 +1,2 @@
+class GalleryPage < Page
+end

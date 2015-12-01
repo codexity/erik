@@ -28,15 +28,19 @@
 
     <!-- Sidebar Menu -->
     <ul class="sidebar-menu">
-      <li class="header">HEADER</li>
+      <li class="header">Admin Panel</li>
       <!-- Optionally, you can add icons to the links -->
-      <li class="active"><a href="#"><i class="fa fa-link"></i> <span>Link</span></a></li>
-      <li><a href="#"><i class="fa fa-link"></i> <span>Another Link</span></a></li>
+      <%= active_link_to(raw("<i class='fa fa-dashboard'></i>Home"), admin_root_path, :active => :exclusive, :wrap_tag => :li, :class_active => 'active') %>
+      <!--<li class="active"><a href="#"><i class="fa fa-link"></i> <span>Home</span></a></li>-->
       <li class="treeview">
-        <a href="#"><i class="fa fa-link"></i> <span>Multilevel</span> <i class="fa fa-angle-left pull-right"></i></a>
+        <%= active_link_to raw("<i class='fa fa-link'></i> <span>Pages</span> <i class='fa fa-angle-left pull-right'></i>"), admin_pages_path, :class_active => 'active'%>
+
         <ul class="treeview-menu">
-          <li><a href="#">Link in level 2</a></li>
-          <li><a href="#">Link in level 2</a></li>
+          <li><%= link_to "List Pages", admin_pages_path %></li>
+          <li><%= link_to "New Custom Page", new_admin_custom_page_path %></li>
+          <li><%= link_to "New Contact Page", new_admin_contact_page_path %></li>
+          <li><%= link_to "New Menu Page", new_admin_menu_page_path %></li>
+          <li><%= link_to "New Gallery Page", new_admin_gallery_page_path %></li>
         </ul>
       </li>
     </ul><!-- /.sidebar-menu -->
