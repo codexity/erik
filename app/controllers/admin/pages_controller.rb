@@ -1,6 +1,6 @@
 class Admin::PagesController < Admin::BaseController
   before_action :set_page, only: [:show, :edit, :update, :destroy]
-  before_action :set_page_type, only: [:create, :edit, :update]
+  before_action :set_page_type, only: [:new]
 
   def index
     @pages = Page.all
@@ -14,11 +14,11 @@ class Admin::PagesController < Admin::BaseController
 
   def new
     @page = Page.new
+    @page_type = set_page_type
   end
 
   def create
     @page = Page.new(page_params)
-    @page.page_type = params.fetch(:page_type)
     if @page.save
       redirect_to admin_pages_path, notice: 'Page was successfully created.'
     else
@@ -42,10 +42,14 @@ class Admin::PagesController < Admin::BaseController
   private
 
     def page_params
-      params.require(params.fetch(:page_type).underscore).permit(:title, :content)
+      params.require(:page).permit(:title, :content, :page_type)
     end
 
     def set_page
       @page = Page.find(params[:id])
+    end
+
+    def set_page_type
+      params[:page_type]
     end
 end

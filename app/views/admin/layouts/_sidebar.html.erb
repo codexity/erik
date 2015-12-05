@@ -37,10 +37,10 @@
 
         <ul class="treeview-menu">
           <li><%= link_to "List Pages", admin_pages_path %></li>
-          <li><%= link_to "New Custom Page", new_admin_custom_page_path %></li>
-          <li><%= link_to "New Contact Page", new_admin_contact_page_path %></li>
-          <li><%= link_to "New Menu Page", new_admin_menu_page_path %></li>
-          <li><%= link_to "New Gallery Page", new_admin_gallery_page_path %></li>
+          <li><%= link_to "New Custom Page", new_admin_page_path(:page_type => 'CustomPage') %></li>
+          <li><%= link_to "New Contact Page", new_admin_page_path(:page_type => 'ContactPage') %></li>
+          <li><%= link_to "New Menu Page", new_admin_page_path(:page_type => 'MenuPage') %></li>
+          <li><%= link_to "New Gallery Page", new_admin_page_path(:page_type => 'GalleryPage') %></li>
         </ul>
       </li>
     </ul><!-- /.sidebar-menu -->

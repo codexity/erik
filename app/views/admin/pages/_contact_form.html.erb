@@ -1,6 +1,6 @@
 <div class="row">
   <div class="col-md-4"></div>
-  <%= form_for [:admin, @contact_page] do |f| %>
+  <%= form_for [:admin, @page] do |f| %>
       <% if @page.errors.any? %>
           <div id="error_explanation">
             <h2><%= pluralize(@page.errors.count, "error") %> prohibited this movie from being saved:</h2>
@@ -23,6 +23,7 @@
             $('.textarea').wysihtml5({toolbar: { color: true } });
           </script>
         </div>
+        <%= f.hidden_field :page_type, { :value => params[:page_type]} %>
 
         <div class="actions">
           <%= f.submit :class => 'btn btn-primary' %>
